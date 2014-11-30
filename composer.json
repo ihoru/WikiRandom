@@ -4,8 +4,9 @@
 	"keywords": ["wiki", "Wikipedia", "random", "article"],
 	"homepage": "https://github.com/ihoru/WikiRandom",
 	"type": "library",
-	"license": "GNU",
+	"license": "GNU-3.0",
 	"version": "1.0.0",
+	"minimum-stability": "dev",
 	"authors": [
 		{
 			"name": "https://github.com/byteriot"
@@ -16,7 +17,9 @@
 			"WikiRandom.class.php"
 		]
 	},
-	"require": {
-		"php": ">=5.4.9"
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.0.x-dev"
+		}
 	}
 }
