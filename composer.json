@@ -1,0 +1,22 @@
+{
+	"name": "ihoru/wikirandom",
+	"description": "WikiRandom is simple and easy to use php lib that help you to get a random Wikipedia article and access to some relative raw data.",
+	"keywords": ["wiki", "Wikipedia", "random", "article"],
+	"homepage": "https://github.com/ihoru/WikiRandom",
+	"type": "library",
+	"license": "GNU",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "https://github.com/byteriot"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"WikiRandom.class.php"
+		]
+	},
+	"require": {
+		"php": ">=5.4.9"
+	}
+}
