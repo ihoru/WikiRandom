@@ -1,32 +1,32 @@
 {
-	"name": "ihoru/wikirandom",
-	"description": "WikiRandom is simple and easy to use php lib that help you to get a random Wikipedia article and access to some relative raw data.",
-	"keywords": ["wiki", "Wikipedia", "random", "article"],
-	"homepage": "https://github.com/ihoru/WikiRandom",
-	"type": "library",
-	"license": "GNU-3.0",
-	"version": "1.1.0",
-	"minimum-stability": "dev",
-	"authors": [
-		{
-			"name": "Alessandro P.",
-			"email": "alex@byteriot.it",
-			"homepage": "https://github.com/byteriot"
-		},
-		{
-			"name": "Igor Polyakov",
-			"email": "ihor.polyakov@gmail.com",
-			"homepage": "https://github.com/ihoru"
-		}
-	],
-	"autoload": {
-		"classmap": [
-			"WikiRandom.class.php"
-		]
-	},
-	"extra": {
-		"branch-alias": {
-			"dev-master": "1.1.x-dev"
-		}
-	}
+    "name": "ihoru/wikirandom",
+    "description": "WikiRandom is simple and easy to use php lib that help you to get a random Wikipedia article and access to some relative raw data.",
+    "keywords": ["wiki", "Wikipedia", "random", "article"],
+    "homepage": "https://github.com/ihoru/WikiRandom",
+    "type": "library",
+    "license": "GNU-3.0",
+    "version": "1.1.1",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Alessandro P.",
+            "email": "alex@byteriot.it",
+            "homepage": "https://github.com/byteriot"
+        },
+        {
+            "name": "Ihor Polyakov",
+            "email": "ihor.polyakov@gmail.com",
+            "homepage": "https://github.com/ihoru"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "WikiRandom.class.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
+        }
+    }
 }
