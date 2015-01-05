@@ -3,13 +3,19 @@
 class WikiRandom
 {
     private $language_supported = array('de', 'en', 'es', 'fr', 'it', 'nl', 'pl', 'ru', 'ceb', 'sv', 'vi', 'war');
+    private $engine_supported = array(
+        'pedia' => 'wikipedia.org',
+        'quote' => 'wikiquote.org',
+    );
     private $base_api;
-    private $language;
+    private $language = 'en';
+    private $engine = 'pedia';
     private $article_ids = array();
 
-    public function __construct($language, $number = 1)
+    public function __construct($language, $number = 1, $engine = 'pedia')
     {
         $this->setLanguage($language);
+        $this->setEngine($engine);
         if ($number > 0) {
             $this->getNewRandomArticle($number);
         }
@@ -38,14 +44,33 @@ class WikiRandom
         return $this->language_supported;
     }
 
+    public function getSupportedEngines()
+    {
+        return array_keys($this->engine_supported);
+    }
+
     public function setLanguage($language)
     {
+        $language = $language ?: $this->language;
         if (!in_array($language, $this->getSupportedLanguages())) {
-            throw new Exception(sprintf('Language %s is not supported', $language));
+            throw new Exception(sprintf('Language [%s] is not supported', $language));
         }
         $this->language = $language;
-        $this->base_api = sprintf('http://%s.wikipedia.org/w/api.php?format=json&rawcontinue=1&', $language);
+        $this->changeBaseApi();
         return true;
+    }
+
+    public function setEngine($engine) {
+        if (!in_array($engine, $this->getSupportedEngines())) {
+            throw new Exception(sprintf('Engine [%s] is not supported', $engine));
+        }
+        $this->engine = $engine;
+        $this->changeBaseApi();
+    }
+
+    protected function changeBaseApi() {
+        $domain = $this->language.'.'.$this->engine_supported[$this->engine];
+        $this->base_api = sprintf('http://%s/w/api.php?format=json&rawcontinue=1&', $domain);
     }
 
     public function getNewRandomArticle($number = 1)
