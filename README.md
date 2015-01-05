@@ -147,4 +147,8 @@ Array
 
 )
 
+
+// Makes class to work with wikiquote.org
+$wr->setEngine('quote');
+
 ```

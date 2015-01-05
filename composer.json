@@ -1,7 +1,7 @@
 {
     "name": "ihoru/wikirandom",
-    "description": "WikiRandom is simple and easy to use php lib that help you to get a random Wikipedia article and access to some relative raw data.",
-    "keywords": ["wiki", "Wikipedia", "random", "article"],
+    "description": "WikiRandom is simple and easy to use php lib that help you to get a random Wikipedia/Wikiquote article and access to some relative raw data.",
+    "keywords": ["wiki", "Wikipedia", "random", "article", "Wikiquote", "pedia", "quote"],
     "homepage": "https://github.com/ihoru/WikiRandom",
     "type": "library",
     "license": "GNU-3.0",
